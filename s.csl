@@ -1954,19 +1954,22 @@
       </choose>
     </group>
   </macro>
-<citation collapse="year" disambiguate-add-givenname="true" disambiguate-add-names="true" disambiguate-add-year-suffix="true" et-al-min="3" et-al-use-first="1" givenname-disambiguation-rule="primary-name-with-initials">
-    <sort>
-      <key variable="issued" sort="descending"/>
-      <key macro="author-sort"/>
-    </sort>
-    <layout delimiter="; " prefix="(" suffix=")">
-      <group delimiter=", ">
-        <text macro="author-short"/>
-        <text macro="date-short"/>
-        <text macro="label-locator"/>
-      </group>
-    </layout>
-  </citation>
+<citation collapse="year" et-al-min="3" et-al-use-first="1"
+          disambiguate-add-givenname="true"
+          disambiguate-add-names="true"
+          disambiguate-add-year-suffix="true">
+  <sort>
+    <key variable="issued" sort="ascending"/>
+    <key macro="author-sort"/>
+  </sort>
+  <layout delimiter="; " prefix="(" suffix=")">
+    <group delimiter=", ">
+      <text macro="author-short"/>
+      <text macro="date-short"/>
+      <text macro="label-locator"/>
+    </group>
+  </layout>
+</citation>
   <macro name="bibliography">
     <group delimiter=" ">
       <choose>
